@@ -190,6 +190,10 @@ h3 {
   margin-right: 5%;
 }
 
+.navbar-fixed-top>.container>.collapse>ul {
+  margin-right: 0;
+}
+
 .faq>.content>.col-sm-6 {
   padding: 0;
 }
