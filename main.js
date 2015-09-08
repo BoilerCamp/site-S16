@@ -6,13 +6,15 @@ if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAg
 }
 
 $(function(){
-  var windowH = $(window).height();
+  var windowH = $(window).height() - 60;
   $(window).on('resize', function(){
-    windowH = $(window).height();
+    windowH = $(window).height() - 60;
   });
 
   $(window).scroll(function() {
      var scrollVal = $(this).scrollTop();
+     console.log('scrollVal', scrollVal);
+     console.log('windowH', windowH);
       if ( scrollVal > windowH ) {
           $('.navbar').addClass('navbar-fixed-top');
           $('.main').css({'margin-top': '70px'});
