@@ -167,6 +167,34 @@ p {
   font-size: 1.1em;
 }
 
+.schedule h2 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.schedule {
+  background-color: #32905A;
+  padding-bottom: 100px;
+}
+
+.entry {
+  margin-bottom: 5px;
+}
+
+.schedule p {
+  color: #fff;
+}
+
+.time {
+  width: 20%;
+  display: inline-block;
+}
+
+.info {
+  width: 75%;
+  display: inline-block;
+}
+
 .faq {
   background-color: #7a6a5c;
   padding-bottom: 50px;

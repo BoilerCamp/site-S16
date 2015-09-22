@@ -37,6 +37,12 @@ $("#nav-about").click(function() {
   }, 400);
   return false;
 });
+$("#nav-schedule").click(function() {
+  $('html, body').animate({
+    scrollTop: $(".schedule").offset().top - 70
+  }, 400);
+  return false;
+});
 $("#nav-faq").click(function() {
   $('html, body').animate({
     scrollTop: $(".faq").offset().top - 70
