@@ -1,0 +1,116 @@
+.granite {
+  box-shadow: none;
+  transition: all 1s linear;
+  &.shadow {
+    transition: all 1s linear;
+  }
+}
+
+.granite-header {
+  width: 100%;
+  @include clearfix;
+
+  .color {
+    display: inline-block;
+    width: 33%;
+    float: left;
+    height: 0.5em;
+
+    &:nth-child(2) {
+      width: 34%;
+    }
+  }
+
+  .header-content {
+    margin-left: 1em;
+    @media screen and (max-width: 640px) {
+      font-size: 0.6em;
+    }
+
+    .title {
+      display: inline-block;
+      color: $clouds;
+      font-family: "Oswald", "Lato", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 5em;
+      text-transform: uppercase;
+    }
+
+    .roles {
+      display: inline-block;
+      text-align: left;
+    }
+    .role {
+      display: block;
+      text-transform: uppercase;
+      background: none;
+      font-family: "Oswald", "Lato", Arial, sans-serif;
+      font-size: 1.313em;
+      font-weight: 300;
+      line-height: 1em;
+      &.color-0 {
+        color: $orange-0;
+        // border: 1px solid $orange-0;
+      }
+      &.color-1 {
+        color: $orange-1;
+        // border: 1px solid $orange-1;
+      }
+      &.color-2 {
+        color: $orange-2;
+        // border: 1px solid $orange-2;
+      }
+      &.color-3 {
+        color: $orange-3;
+        // border: 1px solid $orange-3;
+      }
+      &.color-4 {
+        color: $orange-4;
+        // border: 1px solid $orange-4;
+      }
+    }
+  }
+}
+
+.tile {
+  float: left;
+  width: 33%;
+  height: 10em;
+  padding: 0.5em;
+  border: 0 solid $black;
+  transition: all 0.25s ease;
+
+  &:hover {
+    border: 0.5em solid $black;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    p {
+      background-color: $black;
+      color: $clouds;
+    }
+  }
+
+  p {
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0.4em;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: $clouds;
+  }
+}
+.tile-lg {
+  width: 67%;
+  height: $base-tile-height * 2;
+}
+.tile-fill {
+  width: 34%;
+}
+.tile-right {
+  float: right;
+}

@@ -1,0 +1,44 @@
+@import "bourbon/bourbon";
+@import "reset";
+@import "variables";
+@import "animate";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+html, body {
+  font-size: $base-font-size;
+  background-color: $background-color;
+  font-family: "Lato", Arial, sans-serif;
+  color: $black;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  @include clearfix;
+}
+
+.color-0 {
+  background-color: $orange-0;
+}
+.color-1 {
+  background-color: $orange-1;
+}
+.color-2 {
+  background-color: $orange-2;
+}
+.color-3 {
+  background-color: $orange-3;
+}
+.color-4 {
+  background-color: $orange-4;
+}
+
+@import "granite";

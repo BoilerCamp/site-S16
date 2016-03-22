@@ -1,0 +1,397 @@
+@mixin dotted-border($color) {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border: 2px dashed $color;
+    border-radius: 6px;
+  }
+}
+
+.banner {
+  position: fixed;
+  background-image: url('../images/denim-red.png');
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  z-index: 5;
+  img {
+    margin-right: 1em;
+    height: 18em;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .text-image {
+    height: 18em;
+    transform: rotate(2deg);
+    &:first-of-type {
+      transform: rotate(-2deg);      
+    }
+  }
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: shade($brown, 25%);
+  height: 60px;
+  padding: 0 20px;
+  z-index: 6;
+
+  &:before, &:after {
+    content: "";
+    border-top: 2px dashed $brown;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+  }
+  &:before {
+    top: 6px;
+  }
+  &:after {
+    bottom: 7px;
+  }
+
+  .nav-left, .nav-right {
+    width: 200px;
+  }
+
+  .nav-right {
+    text-align: right;
+  }
+
+  a {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $orange;
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-right: 8px;
+    z-index: 10;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $brown;
+    }
+
+    &.logo {
+      width: 160px;
+      &:hover {
+        background: none;
+      }
+      img {
+        width: 100px;
+      }
+    }
+
+    &.button {
+      position: relative;
+      border-radius: 12px;
+      height: 100px;
+      padding: 35px;
+      background-color: $pink;
+      font-weight: 700;
+      color: $white;
+      margin-left: 1em;
+      transition: all 0.25s ease;
+      box-shadow: 0 1px 3px #333333;
+
+      &:hover {
+        transform: rotate(6deg);
+        transition: all 0.25s ease;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        border: 2px dashed tint($pink, 50%);
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+body {
+  position: relative;
+  padding-top: 464px;
+}
+
+.about, .schedule-faq {
+  // background-image: url('../images/backpack-pattern-slanted.png');
+  // background-size: 10%;
+
+  .container-row {
+    padding: 3em 0;
+    @include outer-container;
+    @include row;
+  }
+
+
+  .photos {
+    position: relative;
+    @include span-columns(6);
+
+    .photo-row {
+      display: flex;
+      .photo {
+        margin-right: 1em;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .photo {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px 16px 10px;
+      margin-bottom: 1em;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px #999999;
+      background-image: url('../images/photo-bg.png');
+      img {
+        box-shadow: 0 0 4px #999999;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .text {
+    @include span-columns(6);
+    padding-left: 2em; 
+    padding-top: 6em;
+
+    h2 {
+      position: relative;
+      background-color: shade($brown, 25%);
+      font-size: 36px;
+      font-weight: 700;
+      color: $white;
+      padding: 6px 18px;
+      display: inline-block;
+      border-radius: 12px;
+      transform: rotate(1deg);
+      margin-bottom: 0.5em;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        border: 2px dashed $brown;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+.schedule-row {
+  display: inline-block;
+  margin-left: 1em;
+  margin-bottom: 4px;
+  // transform: rotate(-1deg);
+  box-shadow: 0 2px 6px #999999;
+  border-radius: 12px;
+
+  .time, .description {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 12px 18px;;
+    font-size: 20px;
+    color: $white;
+  }
+
+  .time {
+    border-radius: 12px 0 0 12px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: url('../images/denim-red.png');
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      right: 7px;
+      border-right: 2px dashed tint($red, 50%);
+    }
+  }
+  .description {
+    color: $black;
+    border-radius: 0 12px 12px 0;
+    background-image: url('../images/photo-bg.png');
+  }
+
+  &:nth-child(2n) {
+    transform: rotate(1deg);
+  }
+  &:nth-child(4n) {
+    transform: rotate(-1deg);
+  }
+}
+
+.schedule-faq {
+  #schedule {
+    @include span-columns(6);
+  }
+  #faq {
+    @include span-columns(6);    
+  }
+}
+
+.columns {
+  display: flex;
+}
+
+.cards {
+  width: 50%;
+  margin: 0;
+  margin-right: 1em;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .card {
+    margin: 0;
+    margin-bottom: 1em;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px #999999;
+    padding: 1em;
+    background-image: url('../images/photo-bg.png');
+    &:nth-child(2n) {
+      transform: rotate(1deg);
+    }
+    &:nth-child(4n) {
+      transform: rotate(-1deg);
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid #D2D2D2;
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+  background-color: $white;
+  color: $black;
+}
+
+.mobile-nav {
+  display:none;
+}
+.mobile-banner {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  body {
+    padding-top: 100px;
+  }
+  .banner {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    top: 20px;
+    a.logo img {
+      margin-top: 10px;
+      width: 90px;
+    }
+    a.button {
+      height: 80px;
+      padding: 25px;
+      &:hover {
+        transform: none;
+        background-color: shade($pink, 20%);
+      }
+    }
+  }
+  .mobile-banner {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-image: url('../images/denim-red.png');
+  }
+  .about, .schedule-faq {
+    .photos {
+      display: none;
+    }
+    .text, .text#schedule, .text#faq {
+      // display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+      .schedule-row {
+        display: block;
+        box-shadow: none;
+        margin-bottom: 1em;
+        margin-left: 0;
+        @include clearfix;
+        .time {
+          font-size: 12px;
+        }
+      }
+      h2 {
+        font-size: 24px;
+        padding: 12px 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .columns {
+        display: block;
+      }
+      .cards {
+        width: 100%;
+      }
+    }
+    .text#faq {
+      margin-top: 4em;
+    }
+  }
+}

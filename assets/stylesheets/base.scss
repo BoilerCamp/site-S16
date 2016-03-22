@@ -1,0 +1,27 @@
+@import "variables";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "reset";
+@import "animate";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+html, body {
+  font-size: $base-font-size;
+  font-family: "Lato", Arial, sans-serif;
+  color: $black;
+}
+
+body {
+  background-image: url('../images/backpack-pattern-slanted.png');
+  background-size: 100px;
+  
+}
+
+@import "boilercamp";
