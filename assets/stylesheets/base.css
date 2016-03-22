@@ -2648,6 +2648,9 @@ body {
       font-weight: 700;
       font-size: 20px;
       margin-bottom: 6px; }
+    .cards .card a {
+      text-decoration: none;
+      color: #FF931E; }
 
 .footer {
   border-top: 1px solid #D2D2D2;
