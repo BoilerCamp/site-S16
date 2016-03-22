@@ -2371,7 +2371,7 @@ body {
     .banner img:last-child {
       margin-right: 0; }
   .banner .text-image {
-    height: 18em;
+    height: 9em;
     -webkit-transform: rotate(2deg);
         -ms-transform: rotate(2deg);
             transform: rotate(2deg); }
