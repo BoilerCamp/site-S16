@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoilerCamp</title>
+    <meta name="description" content="A bootcamp for hackathons">
+    <meta name="author" content="The BoilerMake Team">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!-- stylesheets -->
+    <!-- <link rel="stylesheet" href="assets/stylesheets/bootstrap.css" type="text/css"> -->
+    <link rel="stylesheet" href="assets/stylesheets/base.css" type="text/css">
+    
+    <!-- javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- // <script src="assets/bootstrap/javascripts/bootstrap.js"></script> -->
+
+    <!-- Forward automatically -->
+    <meta http-equiv="refresh" content="0;url=https://boilercamp.gitbooks.io/boilercamp2016/content/">
+
+  </head>
+  <body>
+      <!-- JavaScript Backup for Forwarding -->
+    <script language="javascript">
+        window.location.href = "https://boilercamp.gitbooks.io/boilercamp2016/content/"
+    </script>
+
+
+    <div class="banner" data-0="top: 0px;" data-344="top: -344px;">
+      <img class="text-image" src="assets/images/boiler-text.png" alt="Boiler">
+      <img src="assets/images/patch-textured.png" alt="">
+      <img class="text-image" src="assets/images/camp-text.png" alt="Camp">
+    </div>
+    <div class="mobile-banner"></div>
+    <nav class="navbar" data-0="top: 384px;" data-344="top: 40px;">
+      <a class="logo" href="/" data-0="transform: translateX(-140px); opacity: 0;" data-344="transform: translateX(0); opacity: 1;">
+        <img src="assets/images/patch-textured.png" alt="">
+      </a>
+      <div class="nav-center">
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="button" href="https://boilermake.typeform.com/to/JOU67M">Sign Up</a>
+    </nav>
+    <nav class="navbar mobile-nav">
+      <a class="logo" href="/">
+        <img src="assets/images/patch-textured.png" alt="">
+      </a>
+      <a class="button" href="https://boilermake.typeform.com/to/JOU67M">Sign Up</a>
+    </nav>
+
+    <div class="about" id="about">
+      <div class="container-row">
+        <div class="photos">
+          <div class="photo" style="transform: rotate(-2deg);">
+            <img src="assets/images/gallery_1.jpg" alt="">
+          </div>
+          <div class="photo-row" style="margin-top: -48px;">
+            <div class="photo" style="transform: rotate(1deg);">
+              <img src="assets/images/gallery_2.jpg" alt="">
+            </div>
+            <div class="photo" style="transform: rotate(-1deg);">
+              <img src="assets/images/gallery_3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <h2>Let's Go!</h1>
+          <p>
+            Click <a href="https://boilercamp.gitbooks.io/boilercamp2016/content/">here</a> to get started!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="assets/javascripts/main.js"></script>
+    <script type="text/javascript" src="assets/javascripts/skrollr.min.js"></script>
+    <script type="text/javascript">
+      var initSkrollr = function() {
+        if (window.innerWidth > 960) {
+          var s = skrollr.init({
+            smoothScrolling: false
+          });
+        }
+      }
+      $(document).ready(function() {
+        initSkrollr();
+        $(window).resize(function(event) {
+
+          initSkrollr();
+        });
+      });
+    </script>
+  </body>
+</html>
